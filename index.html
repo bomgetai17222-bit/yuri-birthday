@@ -8,193 +8,163 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg-dark:#120b10;
-  --pink:#ff758c;
-  --soft:#ffb6c1;
+:root{
+--bg:#120b10;
+--pink:#ff758c;
+--soft:#ffb6c1;
 }
 
 body{
-  margin:0;
-  background:var(--bg-dark);
-  font-family:Poppins,sans-serif;
-  color:white;
-  overflow-x:hidden;
+margin:0;
+background:var(--bg);
+font-family:Poppins,sans-serif;
+color:white;
+text-align:center;
 }
 
-/* LOADER */
-#loader{
-  position:fixed;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--bg-dark);
-  z-index:9999;
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
-.heart{
-  font-size:50px;
-  animation:pulse 1s infinite;
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+text-shadow:0 0 15px var(--pink);
 }
 
-@keyframes pulse{
-  0%{transform:scale(.8);}
-  100%{transform:scale(1.2);}
-}
-
-/* WELCOME */
-#welcome{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.glow{
-  font-family:'Playfair Display',serif;
-  font-size:3rem;
-  text-shadow:0 0 15px var(--pink);
-}
-
-.subtitle{
-  color:var(--soft);
-  margin-top:15px;
-}
+.subtitle{color:var(--soft);margin-top:10px}
 
 /* SECTIONS */
 .section{
-  max-width:500px;
-  margin:40px auto;
-  padding:25px;
-  background:rgba(255,255,255,.05);
-  border-radius:20px;
-  backdrop-filter:blur(10px);
+max-width:520px;
+margin:40px auto;
+padding:25px;
+background:rgba(255,255,255,.05);
+border-radius:20px;
+backdrop-filter:blur(10px);
 }
 
 /* LETTER */
 .letter{
-  max-height:0;
-  overflow:hidden;
-  transition:.6s;
+max-height:0;
+overflow:hidden;
+transition:.6s;
+text-align:left;
 }
 .letter.open{max-height:500px}
 
 /* GALLERY */
 .gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 }
 .gallery img{
-  width:100%;
-  border-radius:10px;
+width:100%;
+border-radius:10px;
 }
 
-/* HEART BUTTON */
+/* HEART */
 .big-heart{
-  font-size:3rem;
-  cursor:pointer;
-  color:var(--pink);
+font-size:3rem;
+cursor:pointer;
+color:var(--pink);
 }
 
 /* FINAL */
-#final{display:none;margin-top:20px;color:var(--soft)}
+#final{display:none;color:var(--soft);margin-top:15px}
+
 button{
-  background:var(--pink);
-  border:none;
-  padding:12px 20px;
-  border-radius:25px;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
+background:var(--pink);
+border:none;
+padding:12px 20px;
+border-radius:25px;
+color:white;
+font-weight:600;
+cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
-<div id="loader"><div class="heart">❤️</div></div>
+<div class="hero">
+<h1>Happy Birthday<br>Yuri 💖</h1>
+<p class="subtitle">From your boyfriend, Bomge</p>
+</div>
 
-<header id="welcome">
-  <h1 class="glow">Happy Birthday<br>Yuri</h1>
-  <p class="subtitle">Scroll for your surprises 💖</p>
-</header>
-
-<main>
-
+<!-- LETTER -->
 <div class="section">
-  <h2>A Letter For You</h2>
-  <div onclick="toggleLetter()" style="text-align:center;cursor:pointer;font-size:2rem">💌</div>
-  <div class="letter" id="letter">
-    <p>My dearest Yuri,</p>
-    <p>Happy Birthday to the most beautiful girl in my life.  
-    You make every day brighter just by existing.</p>
-    <p>I hope this year gives you the happiness you give me every day.</p>
-    <p>Forever yours,<br>YOUR NAME</p>
-  </div>
+<h2>A Letter For You</h2>
+<div onclick="toggleLetter()" style="font-size:2rem;cursor:pointer">💌</div>
+<div class="letter" id="letter">
+<p>My dearest Yuri,</p>
+<p>Happy Birthday to the most beautiful girl in my life.</p>
+<p>You make my world brighter just by existing. Every smile of yours is my favorite moment.</p>
+<p>I made this just for you, because you deserve something special.</p>
+<p>I love you more than words can ever explain.</p>
+<p>Forever yours,<br><b>Bomge ❤️</b></p>
+</div>
 </div>
 
+<!-- PHOTOS -->
 <div class="section">
-  <h2>Our Memories</h2>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300?text=Memory+1">
-    <img src="https://via.placeholder.com/300?text=Memory+2">
-    <img src="https://via.placeholder.com/300?text=Memory+3">
-    <img src="https://via.placeholder.com/300?text=Memory+4">
-  </div>
+<h2>Our Memories 📸</h2>
+<div class="gallery">
+<img src="pic1.jpg">
+<img src="pic2.jpg">
+<img src="pic3.jpg">
+<img src="pic4.jpg">
+<img src="pic5.jpg">
+<img src="pic6.jpg">
+<img src="pic7.jpg">
+<img src="pic8.jpg">
+</div>
 </div>
 
-<div class="section" style="text-align:center">
-  <h2>Why I Love You</h2>
-  <div class="big-heart" onclick="nextReason()">❤️</div>
-  <p id="reason">Tap the heart</p>
+<!-- REASONS -->
+<div class="section">
+<h2>Why I Love You</h2>
+<div class="big-heart" onclick="nextReason()">❤️</div>
+<p id="reason">Tap the heart</p>
 </div>
 
-<div class="section" style="text-align:center">
-  <h2>One Last Thing...</h2>
-  <button onclick="reveal()">Tap Here Yuri</button>
-  <div id="final">
-    <h3>I Love You To The Moon And Back 🌙</h3>
-    <p>Happy Birthday my love 🎂✨</p>
-  </div>
+<!-- FINAL -->
+<div class="section">
+<h2>One Last Thing...</h2>
+<button onclick="reveal()">Tap Here Yuri</button>
+<div id="final">
+<h3>I Love You To The Moon And Back 🌙</h3>
+<p>Happy Birthday my love 🎂✨</p>
+<p>— Bomge</p>
 </div>
-
-</main>
+</div>
 
 <script>
-/* FIXED LOADER */
-setTimeout(()=>{
-  const l=document.getElementById("loader");
-  l.style.opacity="0";
-  setTimeout(()=>l.remove(),600);
-},1500);
-
-/* LETTER */
 function toggleLetter(){
-  document.getElementById("letter").classList.toggle("open");
+document.getElementById("letter").classList.toggle("open");
 }
 
-/* REASONS */
 const reasons=[
-"Your smile",
-"Your kindness",
-"Your laugh",
-"How you care for me",
-"Simply because you're Yuri"
+"Your smile melts me",
+"Your cute voice",
+"Your eyes",
+"The way you care for me",
+"Because you're my Yuri"
 ];
 let i=0;
 function nextReason(){
-  document.getElementById("reason").innerText=reasons[i];
-  i=(i+1)%reasons.length;
+document.getElementById("reason").innerText=reasons[i];
+i=(i+1)%reasons.length;
 }
 
-/* FINAL */
 function reveal(){
-  document.getElementById("final").style.display="block";
+document.getElementById("final").style.display="block";
 }
 </script>
 
