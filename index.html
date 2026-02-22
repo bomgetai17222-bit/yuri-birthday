@@ -8,21 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
---bg:#120b10;
---pink:#ff758c;
---soft:#ffb6c1;
-}
-
 body{
 margin:0;
-background:var(--bg);
+background:#120b10;
 font-family:Poppins,sans-serif;
 color:white;
 text-align:center;
 }
 
-/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -34,22 +27,23 @@ align-items:center;
 .hero h1{
 font-family:'Playfair Display',serif;
 font-size:3rem;
-text-shadow:0 0 15px var(--pink);
+text-shadow:0 0 15px #ff758c;
 }
 
-.subtitle{color:var(--soft);margin-top:10px}
+.subtitle{
+color:#ffb6c1;
+margin-top:10px;
+font-size:1.1rem;
+}
 
-/* SECTIONS */
 .section{
 max-width:520px;
 margin:40px auto;
 padding:25px;
 background:rgba(255,255,255,.05);
 border-radius:20px;
-backdrop-filter:blur(10px);
 }
 
-/* LETTER */
 .letter{
 max-height:0;
 overflow:hidden;
@@ -58,7 +52,6 @@ text-align:left;
 }
 .letter.open{max-height:500px}
 
-/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -69,18 +62,20 @@ width:100%;
 border-radius:10px;
 }
 
-/* HEART */
 .big-heart{
 font-size:3rem;
 cursor:pointer;
-color:var(--pink);
+color:#ff758c;
 }
 
-/* FINAL */
-#final{display:none;color:var(--soft);margin-top:15px}
+#final{
+display:none;
+color:#ffb6c1;
+margin-top:15px;
+}
 
 button{
-background:var(--pink);
+background:#ff758c;
 border:none;
 padding:12px 20px;
 border-radius:25px;
@@ -94,8 +89,8 @@ cursor:pointer;
 <body>
 
 <div class="hero">
-<h1>Happy Birthday<br>Yuri 💖</h1>
-<p class="subtitle">From your boyfriend, Bomge</p>
+<h1>Happy Birthday Yuri 💖</h1>
+<p class="subtitle">Made with love by <b>Bomge</b> ❤️</p>
 </div>
 
 <!-- LETTER -->
@@ -105,10 +100,10 @@ cursor:pointer;
 <div class="letter" id="letter">
 <p>My dearest Yuri,</p>
 <p>Happy Birthday to the most beautiful girl in my life.</p>
-<p>You make my world brighter just by existing. Every smile of yours is my favorite moment.</p>
+<p>You make my world brighter just by being in it.</p>
 <p>I made this just for you, because you deserve something special.</p>
-<p>I love you more than words can ever explain.</p>
-<p>Forever yours,<br><b>Bomge ❤️</b></p>
+<p>I love you more than words can explain.</p>
+<p><b>Forever yours,<br>Bomge ❤️</b></p>
 </div>
 </div>
 
@@ -141,7 +136,7 @@ cursor:pointer;
 <div id="final">
 <h3>I Love You To The Moon And Back 🌙</h3>
 <p>Happy Birthday my love 🎂✨</p>
-<p>— Bomge</p>
+<p><b>— Bomge ❤️</b></p>
 </div>
 </div>
 
@@ -152,8 +147,8 @@ document.getElementById("letter").classList.toggle("open");
 
 const reasons=[
 "Your smile melts me",
-"Your cute voice",
-"Your eyes",
+"Your laugh is my favorite sound",
+"Your beautiful heart",
 "The way you care for me",
 "Because you're my Yuri"
 ];
